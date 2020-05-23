@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/parent_layout_padding"
+        android:layout_marginEnd="@dimen/parent_layout_padding"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/IMG_countryIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/globe_icon_150" />
+
+        <TextView
+            android:id="@+id/TV_countryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/IMG_countryIcon"
+            android:text="World"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/TV_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TV_countryName"
+            android:layout_toRightOf="@id/IMG_countryIcon"
+            android:text="date" />
+
+        <ImageView
+            android:id="@+id/IMG_saveIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/favorite_icon_border_24dp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cases Record"
+        android:layout_margin="@dimen/parent_layout_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+    <!-- New Cases -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/parent_layout_padding"
+        android:layout_marginEnd="@dimen/parent_layout_padding"
+        android:layout_marginBottom="@dimen/parent_layout_padding"
+        android:layout_weight="1"
+        android:background="@drawable/statistics_round_rectangle"
+        android:elevation="10dp"
+        android:padding="@dimen/item_inner_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="New cases"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:id="@+id/TV_newCases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+
+    <!-- Active Cases -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/parent_layout_padding"
+        android:layout_marginTop="@dimen/item_separator_margins"
+        android:layout_marginBottom="@dimen/item_separator_margins"
+        android:layout_weight="1"
+        android:background="@drawable/statistics_round_rectangle"
+        android:elevation="10dp"
+        android:padding="@dimen/item_inner_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="Active cases"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:id="@+id/TV_activeCases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+    <!-- Critical Cases -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/parent_layout_padding"
+        android:layout_marginTop="@dimen/item_separator_margins"
+        android:layout_marginBottom="@dimen/item_separator_margins"
+        android:layout_weight="1"
+        android:background="@drawable/statistics_round_rectangle"
+        android:elevation="10dp"
+        android:padding="@dimen/item_inner_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="Critical cases"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:id="@+id/TV_criticalCases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+    <!-- Recovered Cases -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/parent_layout_padding"
+        android:layout_marginTop="@dimen/item_separator_margins"
+        android:layout_marginBottom="@dimen/item_separator_margins"
+        android:layout_weight="1"
+        android:background="@drawable/statistics_round_rectangle"
+        android:elevation="10dp"
+        android:padding="@dimen/item_inner_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="Recovered cases"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:id="@+id/TV_recoveredCases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+    <!-- Total Cases -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/parent_layout_padding"
+        android:layout_marginTop="@dimen/item_separator_margins"
+        android:layout_marginBottom="@dimen/item_separator_margins"
+        android:layout_weight="1"
+        android:background="@drawable/statistics_round_rectangle"
+        android:elevation="10dp"
+        android:padding="@dimen/item_inner_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="Total cases"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:id="@+id/TV_totalCases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:textColor="@color/colorAccent" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //Layout Padding
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="parent_layout_padding">20dp</dimen>
+    <dimen name="item_separator_margins">10dp</dimen>
+    <dimen name="item_inner_padding">20dp</dimen>
+</resources>
