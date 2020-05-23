@@ -1,5 +1,7 @@
 # Covid24
+Egdroid course graduation project.
 A simple application that delivers real-time Covid 19 global statistics.
+USING: FastAndroidNetworking & Room Database.
 
 it follows:
 - MVVM architecture pattern.
@@ -8,6 +10,7 @@ it follows:
 it supports:
 - offline usage (Obviously, Only the most recent cached data will be displayed)
 - Portrait/Landscape orientations
+
 
 NOTE: This was my first approach to code in MVVM and to implement an offline first arch. Thus, bad coding practices may be found as i'm still in the beginner phase.
 
