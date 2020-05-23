@@ -8,7 +8,7 @@ it follows:
 - Offline first architecture approach.
 
 it supports:
-- offline usage (Obviously, Only the most recent cached data will be displayed)
+- Offline usage (Obviously, Only the most recent cached data will be displayed)
 - Portrait/Landscape orientations
 
 
