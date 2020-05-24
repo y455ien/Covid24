@@ -62,6 +62,8 @@ public class WorldDataRepo extends WorldRepo {
             @Override
             public void OnPOJODataReceive(CountryPOJO fetchedCountryPOJO) {
                 Country worldInstance = WorldDataRepo.this.interactor.getWorldInstance(fetchedCountryPOJO);
+                String dataDate = WorldDataRepo.this.interactor.getDataDate(fetchedCountryPOJO);
+                country.setDataDate(dataDate);
                 listener.OnReceive(worldInstance);
             }
         });
