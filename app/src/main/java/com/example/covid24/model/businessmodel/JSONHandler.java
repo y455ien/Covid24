@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CountryFlagHandler {
+public class JSONHandler {
 
     public Map<String, String> getCountryFlagMap(Context context) {
         return loadJSONFromAsset(context);

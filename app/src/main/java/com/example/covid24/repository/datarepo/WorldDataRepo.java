@@ -5,7 +5,6 @@ import android.content.Context;
 import androidx.annotation.Nullable;
 
 import com.example.covid24.model.datamodel.country.Country;
-import com.example.covid24.model.datamodel.country.Statistics;
 import com.example.covid24.model.datamodel.pojo.countrypojo.CountryPOJO;
 import com.example.covid24.model.datamodel.section.Section;
 import com.example.covid24.repository.WorldRepo;
@@ -48,13 +47,13 @@ public class WorldDataRepo extends WorldRepo {
                     cacheWorldData(world, new OnDataCacheListener() {
                         @Override
                         public void OnCache() {
-                            getAndReturnCachedData(country, viewModelListener);
+                            getCachedWorldData(country, viewModelListener);
                         }
                     });
                 }
             });
         } else {
-            getAndReturnCachedData(country, viewModelListener);
+            getCachedWorldData(country, viewModelListener);
         }
     }
 
@@ -72,7 +71,7 @@ public class WorldDataRepo extends WorldRepo {
         this.localDataManager.cacheWorld(country, listener);
     }
 
-    private void getAndReturnCachedData(final Country country, final OnSectionListReadyListener viewModelListener) {
+    private void getCachedWorldData(final Country country, final OnSectionListReadyListener viewModelListener) {
         this.localDataManager.getCachedCountry(country, new OnCachedCountryReceiveListener() {
             @Override
             public void OnCachedCountryStatisticsReceive(Country cachedCountry) {

@@ -40,13 +40,13 @@ public class CountryListDataRepo extends ListRepo {
                     cacheCountryList(countryList, new OnDataCacheListener() {
                         @Override
                         public void OnCache() {
-                            getAndReturnCachedCountryList(viewModelListener);
+                            getCachedCountryList(viewModelListener);
                         }
                     });
                 }
             });
         } else {
-            getAndReturnCachedCountryList(viewModelListener);
+            getCachedCountryList(viewModelListener);
         }
     }
 
@@ -65,7 +65,7 @@ public class CountryListDataRepo extends ListRepo {
         this.localDataManager.cacheCountryList(countryList, listener);
     }
 
-    private void getAndReturnCachedCountryList(final OnCountryListReadyListener viewModelListener) {
+    private void getCachedCountryList(final OnCountryListReadyListener viewModelListener) {
         this.localDataManager.getCachedCountryList(new OnCachedCountryListReceiveListener() {
             @Override
             public void OnCachedCountryListReceive(List<Country> countryList) {

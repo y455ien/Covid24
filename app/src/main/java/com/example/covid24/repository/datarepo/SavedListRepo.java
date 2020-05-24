@@ -17,11 +17,11 @@ public class SavedListRepo extends ListRepo {
 
     @Override
     public void getData(final OnCountryListReadyListener viewModelListener) {
-        getAndReturnCachedCountryList(viewModelListener);
+        getSavedCountryList(viewModelListener);
     }
 
     // Requests the user's saved List from the localDataManager.
-    private void getAndReturnCachedCountryList(final OnCountryListReadyListener viewModelListener) {
+    private void getSavedCountryList(final OnCountryListReadyListener viewModelListener) {
         this.localDataManager.getSavedCountryList(new OnCachedCountryListReceiveListener() {
             @Override
             public void OnCachedCountryListReceive(List<Country> countryList) {

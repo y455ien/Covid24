@@ -4,23 +4,13 @@ import android.content.Context;
 
 import com.example.covid24.model.datamodel.country.Country;
 import com.example.covid24.model.datamodel.country.Statistics;
-import com.example.covid24.model.datamodel.pojo.countrypojo.Cases;
 import com.example.covid24.model.datamodel.pojo.countrypojo.CountryPOJO;
-import com.example.covid24.model.datamodel.pojo.countrypojo.Deaths;
-import com.example.covid24.model.datamodel.pojo.countrypojo.Response;
-import com.example.covid24.model.datamodel.pojo.flaglistpojo.CountryFlag;
-import com.example.covid24.model.datamodel.pojo.flaglistpojo.CountryFlagList;
 import com.example.covid24.model.datamodel.section.DeathsSection;
 import com.example.covid24.model.datamodel.section.NoDataSection;
 import com.example.covid24.model.datamodel.section.Section;
 import com.example.covid24.model.datamodel.section.StatisticsSection;
-import com.google.gson.Gson;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -32,12 +22,12 @@ public class DataInteractor {
 
     private Context context;
     private POJOHandler pojoHandler;
-    private CountryFlagHandler countryFlagHandler;
+    private JSONHandler JSONHandler;
 
     public DataInteractor(Context context) {
         this.context = context;
         this.pojoHandler = new POJOHandler();
-        this.countryFlagHandler = new CountryFlagHandler();
+        this.JSONHandler = new JSONHandler();
     }
 
     /**
@@ -76,7 +66,7 @@ public class DataInteractor {
      * @return
      */
     public List<Country> getCountryList(List<String> fetchedCountriesNames) {
-        Map<String, String> flagsMap = this.countryFlagHandler.getCountryFlagMap(this.context);
+        Map<String, String> flagsMap = this.JSONHandler.getCountryFlagMap(this.context);
         List<Country> countriesList = new ArrayList<>();
         for (String currentCountryName : fetchedCountriesNames) {
             String flagID = flagsMap.get(currentCountryName);

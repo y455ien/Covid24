@@ -36,10 +36,7 @@ public class Country implements Parcelable {
 
     public Country(@NonNull String countryName) {
         this.countryName = countryName;
-//        updateDataDate();
     }
-
-
 
     @NonNull
     public String getCountryName() {
@@ -86,12 +83,6 @@ public class Country implements Parcelable {
             setSaved(false);
         }
     }
-
-//    public void updateDataDate() {
-//        Date todayDate = Calendar.getInstance().getTime();
-//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-//        this.dataDate = formatter.format(todayDate);
-//    }
 
     // Parcelable implementation----------------------------------
 
